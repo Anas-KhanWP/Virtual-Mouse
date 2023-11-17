@@ -39,8 +39,13 @@ while True:
                     thumb_y = screen_height / frame_height * y
 
                     print('outside', abs(index_y - thumb_y))
-
-                    #the time module to measure the duration when the condition abs(index_y - thumb_y) < 20 is satisfied. If the duration is greater than 1 second, it triggers the "Click & hold" action using pyautogui.mouseDown(). If the condition is not satisfied, it releases the mouse button using pyautogui.mouseUp().
+                    
+                    '''
+                    the time module to measure the duration when the condition abs(index_y - thumb_y) < 20 is satisfied.
+                    If the duration is greater than 1 second, it triggers the "Click & hold" action using pyautogui.mouseDown().
+                    If the condition is not satisfied, it releases the mouse button using pyautogui.mouseUp().
+                    '''
+                    
                     if abs(index_y - thumb_y) < 20:
                         if click_and_hold_timer is None:
                             click_and_hold_timer = time.time()
