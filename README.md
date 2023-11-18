@@ -36,7 +36,6 @@ camera works with the help of different image processing techniques.
   ```
   
   Step 4:
-  cd to src by cd src
   ```bash 
   python Virtual_Mouse.py
   ```
