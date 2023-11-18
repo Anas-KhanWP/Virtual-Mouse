@@ -161,14 +161,14 @@ class Controller:
         dist = round((hand_result.landmark[8].x - Controller.pinchstartxcoord)*10,1)
         return dist
     
-    def changesystembrightness():
-        currentBrightnessLv = sbcontrol.get_brightness()/100.0
-        currentBrightnessLv += Controller.pinchlv/50.0
-        if currentBrightnessLv > 1.0:
-            currentBrightnessLv = 1.0
-        elif currentBrightnessLv < 0.0:
-            currentBrightnessLv = 0.0       
-        sbcontrol.fade_brightness(int(100*currentBrightnessLv) , start = sbcontrol.get_brightness())
+    # def changesystembrightness():
+    #     currentBrightnessLv = sbcontrol.get_brightness()/100.0
+    #     currentBrightnessLv += Controller.pinchlv/50.0
+    #     if currentBrightnessLv > 1.0:
+    #         currentBrightnessLv = 1.0
+    #     elif currentBrightnessLv < 0.0:
+    #         currentBrightnessLv = 0.0       
+    #     sbcontrol.fade_brightness(int(100*currentBrightnessLv) , start = sbcontrol.get_brightness())
     
     def changesystemvolume():
         devices = AudioUtilities.GetSpeakers()
@@ -307,7 +307,7 @@ class Controller:
             if Controller.pinchmajorflag == False:
                 Controller.pinch_control_init(hand_result)
                 Controller.pinchmajorflag = True
-            Controller.pinch_control(hand_result,Controller.changesystembrightness, Controller.changesystemvolume)
+            Controller.pinch_control(hand_result, Controller.changesystemvolume)
         
 '''
 ----------------------------------------  Main Class  ----------------------------------------
