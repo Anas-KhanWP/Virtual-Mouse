@@ -37,5 +37,5 @@ camera works with the help of different image processing techniques.
   
   Step 4:
   ```bash 
-  python Virtual_Mouse.py
+  python main.py
   ```
